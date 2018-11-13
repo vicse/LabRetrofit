@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp">
+
+    <EditText
+        android:id="@+id/correo_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:inputType="text"
+        android:hint="Ingrese correo electrónico"
+        android:maxLines="1"
+        android:maxLength="100"/>
+
+    <EditText
+        android:id="@+id/tipo_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:hint="Tipo de Solicitud"
+        android:inputType="text"
+        android:maxLines="1"
+        android:maxLength="100"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:textSize="20sp"
+        android:text="Ingrese motivo de la solicitud"/>
+
+    <EditText
+        android:id="@+id/motivo_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:inputType="textMultiLine"
+        android:lines="6"
+        android:maxLength="500"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:drawableStart="@android:drawable/ic_menu_camera"
+            android:text="Capturar/ Cargar Voucher"
+            android:onClick="takePicture"/>
+
+        <ImageView
+            android:id="@+id/imagen_preview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_launcher"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:onClick="callRegister"/>
+
+</LinearLayout>
